@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title> Basic Calculator </title>
+
+
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.11.2.js"></script>
+    <link href="well.css" rel="stylesheet" />
+    <link href="center.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+
+        $(document).ready(function () {
+            $("#add").on("click", function () {
+                var a = parseInt($('#a').val());
+                var b = parseInt($('#b').val());
+                var add = a + b;
+                $('#result').val(add);
+            })
+            $("#sub").on("click", function () {
+                var a = parseInt($('#a').val());
+                var b = parseInt($('#b').val());
+                var sub = a - b;
+                $('#result').val(sub);
+            })
+            $("#mul").on("click", function () {
+                var a = parseInt($('#a').val());
+                var b = parseInt($('#b').val());
+                var mul = a * b;
+
+                $('#result').val(mul);
+            })
+            $("#div").on("click", function () {
+                var a = parseInt($('#a').val());
+                var b = parseInt($('#b').val());
+                var div = a / b;
+
+                $('#result').val(div);
+            })
+
+        })
+    </script>
+</head>
+<body style="background-color:aliceblue">
+    <div class="container text-center center ">
+        <div class="row">
+            <div class="col-xs-4">
+                <br />
+
+                <div class="well">
+                    <h2 style="color:cadetblue"> Basic Calculator</h2>
+                    <hr />
+
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-hand-down"></span>
+                        <label for="a">First Number</label>
+                        <input class="form-control" type="text" id="a" placeholder="Give first number" />
+                    </div>
+
+                    <div class="form-group">
+
+                        <span class="glyphicon glyphicon-hand-down"></span><label for="b">Second Number</label>
+                        <input class="form-control" type="text" id="b" placeholder="Give second number" />
+                    </div>
+                    <div class="form-group">
+                        <label for="result"> Result</label>
+                        <input class="form-control" type="text" id="result" readonly />
+                    </div>
+
+
+                    <button id="add" type="button" class="btn btn-info btn-md-2"><span class="glyphicon glyphicon-plus"></span>       </button>
+                    <button id="sub" type="button" class="btn btn-info btn-md-2"><span class="glyphicon glyphicon-minus"></span> </button>
+                    <button id="mul" type="button" class="btn btn-info btn-md-2"><span class="glyphicon glyphicon-asterisk"></span> </button>
+                    <button id="div" type="button" class="btn btn-info btn-md-2"> <span class="glyphicon glyphicon-italic"></span> </button>
+                    
+                    <div />
+
+                </div>
+            </div>
+            <div id="footer">
+                <div class="wrap" ;>
+                    <a href=""><span class="glyphicon glyphicon-copyright-mark"></span>Imran Hossain </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
